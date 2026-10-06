@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08020f">
+  <title>Abrindo acesso</title>
+  <style>
+    *{box-sizing:border-box}
+    html,body{margin:0;min-height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+    body{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:
+        radial-gradient(circle at 50% 40%, rgba(117,32,171,.18), transparent 42%),
+        linear-gradient(180deg,#08010f 0%,#100319 100%);
+      color:#fff;
+      overflow:hidden;
+    }
+    .card{
+      width:min(88vw,740px);
+      padding:64px 48px 58px;
+      border:1px solid rgba(196,91,255,.42);
+      border-radius:42px;
+      background:linear-gradient(145deg,rgba(72,28,95,.72),rgba(24,5,38,.78));
+      box-shadow:0 0 70px rgba(170,55,255,.10), inset 0 0 40px rgba(200,80,255,.06);
+      text-align:center;
+    }
+    .icon{
+      width:150px;height:150px;margin:0 auto 44px;
+      border-radius:42px;
+      display:flex;align-items:center;justify-content:center;
+      font-size:58px;
+      background:linear-gradient(145deg,#6f25a1,#3d155c);
+      border:1px solid rgba(214,122,255,.4);
+      box-shadow:0 0 0 12px rgba(132,50,174,.14), inset 0 0 25px rgba(255,120,255,.10);
+    }
+    .title{font-size:clamp(36px,7vw,58px);font-weight:800;line-height:1.05;margin:0 0 28px}
+    .subtitle{font-size:clamp(21px,4vw,30px);font-weight:600;color:#d9c8df;margin:0 0 48px}
+    .progress{
+      height:20px;border-radius:999px;
+      padding:3px;
+      background:rgba(255,255,255,.09);
+      box-shadow:0 0 12px rgba(190,68,255,.55);
+      overflow:hidden;
+    }
+    .bar{
+      height:100%;width:0;border-radius:999px;
+      background:linear-gradient(90deg,#b72cff,#d87cff);
+      animation:load 2.8s linear forwards;
+    }
+    .secure{
+      margin-top:28px;
+      color:#b9a5c4;
+      font-size:20px;
+      font-weight:800;
+      letter-spacing:2px;
+    }
+    .dot{
+      display:inline-block;width:16px;height:16px;border-radius:50%;
+      background:#4ed7aa;margin-right:14px;vertical-align:middle;
+      box-shadow:0 0 16px rgba(78,215,170,.9);
+    }
+    @keyframes load{to{width:100%}}
+    @media(max-width:520px){
+      .card{padding:48px 28px 44px;border-radius:32px}
+      .icon{width:130px;height:130px;border-radius:38px;font-size:50px;margin-bottom:38px}
+      .subtitle{margin-bottom:38px}
+      .secure{font-size:15px}
+    }
+  </style>
+</head>
+<body>
+  <main class="card" aria-label="Abrindo acesso">
+    <div class="icon">🔒</div>
+    <h1 class="title">Abrindo acesso</h1>
+    <p class="subtitle">Abrindo o Telegram...</p>
+    <div class="progress" aria-hidden="true"><div class="bar"></div></div>
+    <div class="secure"><span class="dot"></span>CONEXÃO SEGURA</div>
+  </main>
+
+  <script>
+    const telegramUrl = "https://t.me/+ZLbs_-J9-QBmN2Fh";
+    setTimeout(() => {
+      window.location.replace(telegramUrl);
+    }, 3000);
+  </script>
+</body>
+</html>
